@@ -6,12 +6,15 @@ Softwares Required:
 VS Code
 Terraform
 AWS CLI V2
-Steps:
 
+Steps:
 Create IAM administrator user. Copy the access key and secret key. Don't push to any GitHub or internet.
 Configure user in your laptop using
+
 aws configure
+
 Add the terraform path to system variables.
+
 alt text
 
 Terraform is popular IaC (Infrastructure as a Code) tool. It is best in the market now.
@@ -44,9 +47,15 @@ Modular Infra:
 Code reuse. We can develop our own modules our use open source modules to reuse the infra code. instead of spending more time to create infra from the scratch we can reuse modules.
 
 Terraform Commands
+
 First command is to initialize the terraform, at this stage terraform downloads the provider into .terraform folder.
+
 terraform init
+
 Next we need to run plan command, at this stage terraform compares the infra between declared and existing. This is only plan terraform will not create
+
 terraform plan
+
 Next we need to apply the infra, at this stage terraform create the infra with approval.
+
 terraform apply
