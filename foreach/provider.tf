@@ -5,6 +5,13 @@ terraform {
       version = "5.35.0" # AWS provider version, not terraform version
     }
   }
+
+  backend "s3" {
+    bucket = "brahmam005-remote-state"
+    key    = "foreach"
+    region = "us-east-1"
+    dynamodb_table = "brahmam005-locking"
+  }
 }
 
 provider "aws" {
